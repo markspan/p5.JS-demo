@@ -10,7 +10,7 @@ function setup() {
   createCanvas(windowWidth, windowHeight);
 
   // Add an initial set of boids into the system
-  for (let i = 0; i < 100; i++) {
+  for (let i = 0; i < 1000; i++) {
     boids[i] = new Boid(random(width), random(height));
   }
 }
