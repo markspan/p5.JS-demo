@@ -10,7 +10,7 @@ function setup() {
   createCanvas(windowWidth, windowHeight);
 
   // Add an initial set of boids into the system
-  for (let i = 0; i < 250; i++) {
+  for (let i = 0; i < 100; i++) {
     boids[i] = new Boid(random(width), random(height));
   }
 }
@@ -30,7 +30,7 @@ class Boid {
     this.acceleration = createVector(0, 0);
     this.velocity = p5.Vector.random2D();
     this.position = createVector(x, y);
-    this.r = 9.0;
+    this.r = 3.0;
     this.maxspeed = 3;    // Maximum speed
     this.maxforce = 0.05; // Maximum steering force
   }
@@ -90,7 +90,7 @@ class Boid {
   render() {
     fill(127, 127);
     stroke(200);
-    ellipse(this.position.x, this.position.y, this.r, this.r);
+    ellipse(this.position.x, this.position.y, 3.0*this.r, 4.0*this.r);
   }
   
   // Wraparound
